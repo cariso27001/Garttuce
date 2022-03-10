@@ -1,4 +1,6 @@
-<a href="https://github.com/cropbox/Cropbox.jl" target="_blank"><img src="docs/src/assets/logo.svg" alt="Cropbox" width="150"></a>
+<a href="https://github.com/cropbox/Cropbox.jl" target="_blank"><img src="https://cropbox.github.io/Cropbox.jl/stable/assets/logo.svg" alt="Cropbox" width="150"></a>
+
+This is the lettuce model modified from the garlic model on Cropbox framework.
 
 # Garlic.jl
 
