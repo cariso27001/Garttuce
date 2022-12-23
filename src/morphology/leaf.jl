@@ -107,7 +107,8 @@ end
         #HACK ensure zero area for zero length
         # for garlic, see JH's thesis
         l = Cropbox.deunitfy(L)
-        iszero(l) ? l : 1.639945 + 0.954957l + 0.5920l^2
+        # iszero(l) ? l : 1.639945 + 0.954957l + 0.5920l^2
+        iszero(l) ? l : 2.130224 - 0.982149l + 0.285527l^2
     end ~ call(u"cm^2")
 
 
@@ -121,7 +122,8 @@ end
     area_increase_from_length(length) => begin
         # for garlic, see JH's thesis
         l = Cropbox.deunitfy(length)
-        0.954957 + 2*0.5920l
+        # 0.954957 + 2*0.5920l
+        -0.982149 + 2*0.285527l
     end ~ track(u"cm^2")    
 
     #TODO better name, shared by growth_duration and potential_area
