@@ -145,7 +145,8 @@ end
         # for MAIZSIM
         #self.maximum_length * self.rank_effect(weight=0.5)
         # for beta fn calibrated from JH's thesis for SP and KM varieties, 8/10/15, SK
-        maximum_length * β
+        # maximum_length * β
+        maximum_length
     end ~ track(u"cm")
 
     # from CLeaf::calc_dimensions()
