@@ -5,8 +5,10 @@
     #FIXME: leaves_potential is already max(leaves_generic, leaves_total)?
     n(np=pheno.leaves_potential, ng=pheno.leaves_generic): leaf_count => max(np, ng) ~ track
     Tn: minimum_temperature => 0 ~ preserve
-    To(n): optimal_temperature => 0.88n ~ track
-    Tx(n): maximum_temperature => 1.64n ~ track
+    # To(n): optimal_temperature => 0.88n ~ track
+    To(n): optimal_temperature => 0.30n ~ track
+    # Tx(n): maximum_temperature => 1.64n ~ track
+    Tx(n): maximum_temperature => 0.95n ~ track
 end
 
 @system LeafColdInjury begin
@@ -145,8 +147,8 @@ end
         # for MAIZSIM
         #self.maximum_length * self.rank_effect(weight=0.5)
         # for beta fn calibrated from JH's thesis for SP and KM varieties, 8/10/15, SK
-        # maximum_length * β
-        maximum_length
+        maximum_length * β
+        #maximum_length
     end ~ track(u"cm")
 
     # from CLeaf::calc_dimensions()
